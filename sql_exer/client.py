@@ -9,7 +9,7 @@ email = ""
 def receive():
     while True:
         try:
-            mssg = client.recv(1024).decode('ascii')
+            mssg = client.recv(1024).decode('utf-8')
             print(mssg)
         except: 
             print("An error ocurred!")
@@ -18,10 +18,8 @@ def receive():
 
 def write():
     while True:
-        mssg = (f"{email} : {input('Enter message: ')}")
-        client.send(mssg.encode('ascii'))
-
-
+        mssg = (f"{email} : {input()}")
+        client.send(mssg.encode('utf-8'))
 
 receive_thread = threading.Thread(target=receive)
 receive_thread.start()
