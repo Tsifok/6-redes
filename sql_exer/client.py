@@ -4,8 +4,6 @@ import threading
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client.connect(("127.0.0.1", 55555))
 
-email = ""
-
 def receive():
     while True:
         try:
@@ -16,10 +14,10 @@ def receive():
             client.close()
             break
 
-def write():
-    while True:
-        mssg = (f"{email} : {input()}")
-        client.send(mssg.encode('utf-8'))
+def write():        
+    mssg = (f"{input()}")
+    client.send(mssg.encode('utf-8'))
+
 
 receive_thread = threading.Thread(target=receive)
 receive_thread.start()
