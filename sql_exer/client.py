@@ -14,9 +14,10 @@ def receive():
             client.close()
             break
 
-def write():        
-    mssg = (f"{input()}")
-    client.send(mssg.encode('utf-8'))
+def write():  
+    while True:      
+        mssg = (f"{input()}")
+        client.send(mssg.encode('utf-8'))
 
 
 receive_thread = threading.Thread(target=receive)

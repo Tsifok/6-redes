@@ -1,4 +1,4 @@
-from sql_exer.config import *
+"""from sql_exer.config import *
 
 conexion = obtener_conexion()
 email = "test@gmail.com"
@@ -9,3 +9,5 @@ consulta = f'SELECT * FROM usuarios WHERE email = "{email}" AND password = "{pas
 cursor.execute(consulta)
 resultado = cursor.fetchone()
 print(resultado[0])
+"""
+
