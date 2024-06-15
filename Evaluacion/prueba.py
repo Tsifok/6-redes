@@ -4,8 +4,20 @@ array = [
     ("Matias","herman")
 ]
 
+online_users = []
+
+for usuario, password in array:    
+    online_users.append([usuario, password])    
+        
+online_users.remove(online_users[0])        
 
 
-for usuario, password in array:
-    if (usuario == "Tsifok"):
-        print(f"{usuario} {password}")
+
+
+print(online_users)
+    
+    
+
+
+
+
